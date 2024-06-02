@@ -1,11 +1,11 @@
-var nombre = "Anto";
-var edad = "18";
+var nombre = "Ye";
+let edad = 18;
 
 alert("Quieres Viajar " + nombre);
 
 if (edad >= 18) {
-    console.log ("puedes reservar hoteles");
+    console.log ("Puedes Reservar Hoteles");
 }
-else (edad < 18) {
-    console.log ("necesitas un adulto")
+else {
+    console.log ("Necesitas un Adulto")
 }
