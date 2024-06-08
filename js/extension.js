@@ -23,7 +23,7 @@ switch (lugar) {
         console.log ("Madrid");
     break
     default:
-        console.log ("Ingresa Otro Lugar")
+       console.log ("Ingresa Otro Lugar")
     break
 };
 
