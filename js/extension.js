@@ -1,4 +1,4 @@
-const
+
 var nombre = "Anto";
 let edad = 18;
 var lugar = prompt ("Ingresa el Lugar");
