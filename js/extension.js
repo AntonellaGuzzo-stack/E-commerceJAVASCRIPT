@@ -29,3 +29,7 @@ switch (lugar) {
 
 let Vector = ["Pileta","Desayuno","Muy Visual","Atencion","Posicion"];
 console.log (Vector[0,3]);
+
+for (var i=1;i<=10;i++){
+    console.log("Hoteles Top 10 N° "+ i);
+}
