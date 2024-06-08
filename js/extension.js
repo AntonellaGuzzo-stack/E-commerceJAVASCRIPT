@@ -28,4 +28,4 @@ switch (lugar) {
 };
 
 let Vector = ["Pileta","Desayuno","Muy Visual","Atencion","Posicion"];
-console.log (Vector[3]);
+console.log (Vector[0,3]);
