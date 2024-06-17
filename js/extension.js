@@ -1,7 +1,7 @@
 
-var nombre = "Anto";
+let nombre = "Anto";
 let edad = 18;
-var lugar = prompt ("Ingresa el Lugar");
+let lugar = prompt ("Ingresa el Lugar");
 
 alert("Quieres Viajar " + nombre);
 
