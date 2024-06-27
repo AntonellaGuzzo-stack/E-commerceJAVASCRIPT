@@ -14,7 +14,7 @@ const productos = [
 
         id: 3,
         nombre: "Heladera",
-        Precio: 15000
+        precio: 15000
     },
     {
         id: 4,
@@ -30,8 +30,8 @@ const productos = [
         id: 6,
         nombre: "Heladera",
         precio: 15000
-    }
-]
+    },
+];
 
 let cardProducts = [];
 
@@ -59,6 +59,8 @@ function addToCardButton (){
 
             cardProducts.push (selectedProduct)
             console.log (cardProducts)
+
+            localStorage.setItem("cardProducts", JSON.stringify(cardProducts))
         }
     })
 
