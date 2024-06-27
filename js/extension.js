@@ -11,6 +11,7 @@ const productos = [
         precio: 15000
     },
     {
+
         id: 3,
         nombre: "Heladera",
         Precio: 15000
