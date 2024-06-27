@@ -1,35 +1,65 @@
 
-var nombre = "Anto";
-let edad = 18;
-var lugar = prompt ("Ingresa el Lugar");
+const productos = [
+    {
+        id: 1,
+        nombre: "Televisor",
+        precio: 15000
+    },
+    {
+        id: 2,
+        nombre: "Celular",
+        precio: 15000
+    },
+    {
 
-alert("Quieres Viajar " + nombre);
+        id: 3,
+        nombre: "Heladera",
+        Precio: 15000
+    },
+    {
+        id: 4,
+        nombre: "Televisor",
+        precio: 15000
+    },
+    {
+        id: 5,
+        nombre: "Celular",
+        precio: 15000
+    },
+    {
+        id: 6,
+        nombre: "Heladera",
+        precio: 15000
+    }
+]
 
-if (edad >= 18) {
-    console.log ("Puedes Reservar Hoteles");
-}
-else {
-    console.log ("Necesitas un Adulto")
-}
+let cardProducts = [];
 
-switch (lugar) {
-    case "Argentina":
-        console.log ("Buenos Aires");
-    break
-    case "Colombia":
-        console.log ("Barranquillas");
-    break
-    case "España":
-        console.log ("Madrid");
-    break
-    default:
-       console.log ("Ingresa Otro Lugar")
-    break
+let productsContainer = document.getElementById("products-container");
+function renderProductos (productsArray){
+    productsArray.forEach(producto => {
+        const card = document.createElement("div")
+        card.innerHTML = `<img class="imagen" width="350px" alt="Producto 1">
+                          <h2 class="detalles">${producto.nombre}</h2>
+                          <p class="Precio">${producto.precio}</p>
+                          <button class= "productoAgregar" id="${producto.id}">Comprar </button>`
+        productsContainer.appendChild(card)
+    })
+
+    addToCardButton()
 };
+renderProductos(productos);
 
-let Vector = ["Pileta","Desayuno","Muy Visual","Atencion","Posicion"];
-console.log (Vector[0,3]);
+function addToCardButton (){
+    addButton = document.querySelectorAll(".productoAgregar")
+    addButton.forEach(button  => {
+        button.onclick = (e) => {
+            const productId = e.currentTarget.id
+            const selectedProduct = productos.find(producto => producto.id == productId)
 
-for (var i=1;i<=10;i++){
-    console.log("Hoteles Top 10 N° "+ i);
-}
+            cardProducts.push (selectedProduct)
+            console.log (cardProducts)
+        }
+    })
+
+};
