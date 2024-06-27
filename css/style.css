@@ -20,7 +20,6 @@ body {
     margin: auto;
     border: 1px solid black;
     justify-content: center;
-    
 }
 .producto1 {
     grid-column: 1;
@@ -47,7 +46,20 @@ body {
     grid-row: 2;
 }
 .imagen {
-    border: black;
+    margin: 5px;
     border-radius: 10%;
-
+}
+.detalles {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #6B7157;
+}
+.Precio {
+    font-size: 20px;
+    font-weight: 700 ;
+}
+.Pie {
+    margin: 25px;
+    text-align: end;
+    font-size: 70px;
 }
