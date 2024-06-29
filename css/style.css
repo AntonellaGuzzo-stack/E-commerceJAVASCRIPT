@@ -11,7 +11,6 @@ body {
 }
 h1{
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     font-size: 85px;
     margin: 250px 50px;
 }
@@ -20,14 +19,15 @@ img {
     height: 340px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
+    align-items: end;
 }
 header{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap:15%;
-    height: 95px;
-    top: 00;
+    height: 100px;
+    top: 0;
     position: fixed;
     width: 100%;
 }
@@ -94,4 +94,22 @@ header{
 }
 .productoAgregar:hover{
     background-color: #2D4263;
+}
+footer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 70px;
+    flex-direction: column;
+}
+.productoFinal{
+    background-color: #737191;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
 }
