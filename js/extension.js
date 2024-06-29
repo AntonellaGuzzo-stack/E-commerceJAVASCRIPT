@@ -1,4 +1,14 @@
-
+const header = document.querySelector("#header");
+const contenedor = document.querySelector("#contenedor");
+const body = document.querySelector("body");
+window.addEventListener("scroll", function(){
+    if(contenedor.getBoundingClientRect().top<10){
+        header.classList.add("scroll")
+    }
+    else{
+        header.classList.remove("scroll")
+    }
+});
 const producto = [
     {
         id: 1,
@@ -46,7 +56,7 @@ function renderProducto (productsArray){
         const card = document.createElement("div")
         card.innerHTML = `<img class="imagen" src="${producto.img} width="350px" alt="Producto 1">
                           <h2 class="informacion">${producto.nombre}</h2>
-                          <p class="informacion-precio">${producto.precio}$</p>
+                          <p class="informacion-precio">$${producto.precio}</p>
                           <button class= "productoAgregar" id="${producto.id}">Comprar</button>`
         productsContainer.appendChild(card);
     });
@@ -64,18 +74,6 @@ function addToCardButton (){
             console.log (cardProducts)
 
             localStorage.setItem("cardProducts", JSON.stringify(cardProducts))
-        }
+        } 
     })
 };
-
-const header = document.querySelector("#header");
-const contenedor = document.querySelector("#contenedor");
-const body = document.querySelector("body");
-window.addEventListener("scroll", function(){
-    if(contenedor.getBoundingClientRect().top<10){
-        header.classList.add("scroll")
-    }
-    else{
-        header.classList.remove("scroll")
-    }
-});
