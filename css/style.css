@@ -47,14 +47,13 @@ header{
     height: auto;
 }
 .Titulo{
-    filter: invert(100%);
-}
+    filter: invert(100%);}
 .contenedor{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 .contenedor>div{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -74,23 +73,30 @@ header{
     font-size: 60px;
 }
 .informacion-precio{
-    height: 80px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:15px;
+    gap:25px;
     font-size: 40px;
 }
 .productoAgregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #737191;
-    width: 100px;
+    margin-top: 25px;
+    margin-left: 30%;
+    margin-bottom: 15px;
+    width: 150px;
     height: 35px;
     border-radius: 10px;
     border: none;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 3000;
     cursor: pointer;
+    border: solid 1px;
 }
 .productoAgregar:hover{
     background-color: #2D4263;
