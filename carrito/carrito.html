@@ -15,11 +15,16 @@
     <main id="contenedor" class="contenedor">
         <h2>Carrito</h2>
         <section id="card-section"></section>
-       
+        <section id="totales">
+            <p>Total unidades: <span id="cantidad">0</span></p>
+            <p>Total precio: $<span id="precio">0</span></p>
+            <button>Comprar</button>
+            <button id="reiniciar">Reiniciar</button>
+          </section>
     </main>
     <footer class="Pie">
-        <a href="../index.html">Ir a Productos</a>
-        <p class="">Total: $XX,XX</p>
+        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="../index.html">elige algunos productos</a></p>
+        <p id="">Total: $XX,XX</p>
         <button class="productoFinal">Finalizar Compra</button>
     </footer>
 </body>
