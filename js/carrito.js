@@ -13,33 +13,32 @@ function renderCarrito (celularItems){
                         <button class= "productoSumar">+</button></div>`;                 
       celularContainer.appendChild(celular);
   })
+  RestarProducto()
 }
 renderCarrito(celularStorage);
 
-function NuevoProducto() {
-  const addButtonRestar = document.querySelectorAll(".productoRestar")[0];
-  addButtonRestar.forEach((button) => {
+function RestarProducto() {
+  const restarButtons = document.querySelectorAll(".productoRestar");
+  restarButtons.forEach(button => {
     button.onclick = (e) => {
       const productId = e.currentTarget.id;
-      const selectedProduct = producto.find((producto) => producto.id == productId);
-      cardProducts.push(selectedProduct);
-      // Actualiza la cantidad en algún elemento HTML
-      // Ejemplo: cantidadElement.innerText = selectedProduct.cantidad;
+      const selectedProduct = producto.find(producto => producto.id == productId);
+
+      // Verifica si el producto ya está en el arreglo
+      const existingProductIndex = celularProducts.findIndex(p => p.id === selectedProduct.id);
+      if (existingProductIndex !== -1) {
+        // Resta la cantidad
+        celularProducts[existingProductIndex].cantidad -= 1;
+
+        // Si la cantidad llega a cero, elimina el producto del arreglo
+        if (celularProducts[existingProductIndex].cantidad === 0) {
+          celularProducts.splice(existingProductIndex, 1);
+        }
+      }
+
+      // Actualiza la interfaz y los totales
       crearTarjetasProductosCarrito();
       actualizarTotales();
     };
   });
-
-  const addButtonSumar = document.querySelectorAll(".productoSumar")[1];
-  addButtonSumar.forEach((button) => {
-    button.onclick = (e) => {
-      const cantidadElement = document.getElementsByClassName("cantidad")[0];
-      // Actualiza la cantidad en algún elemento HTML
-      // Ejemplo: cantidadElement.innerText = restarAlCarrito(producto);
-      crearTarjetasProductosCarrito();
-      actualizarTotales();
-    };
-  });
-
-  localStorage.setItem("celularProducts", JSON.stringify(celularProducts));
 }
