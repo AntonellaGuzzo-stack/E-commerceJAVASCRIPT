@@ -54,6 +54,7 @@ let cardProducts = [];
 function renderProducto (productsArray){
     productsArray.forEach(producto => {
         const card = document.createElement("div")
+        card.classList = "tarjeta-producto"
         card.innerHTML = `<img class="imagen" src="${producto.img} width="350px" alt="Producto 1">
                           <h2 class="informacion">${producto.nombre}</h2>
                           <p id="precioCarrito" class="informacion-precio">$${producto.precio}</p>
