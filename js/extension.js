@@ -49,21 +49,22 @@ const producto = [
 ];
 
 let productsContainer = document.getElementById("contenedor");
-let cardProducts = [];
+let celularProducts = [];
 
 function renderProducto (productsArray){
     productsArray.forEach(producto => {
-        const card = document.createElement("div")
-        card.classList = "tarjeta-producto"
-        card.innerHTML = `<img class="imagen" src="${producto.img} width="350px" alt="Producto 1">
+        const celular = document.createElement("div")
+        celular.classList = "tarjeta-producto"
+        celular.innerHTML = `<img class="imagen" src="${producto.img} width="350px" alt="Producto 1">
                           <h2 class="informacion">${producto.nombre}</h2>
                           <p id="precioCarrito" class="informacion-precio">$${producto.precio}</p>
                           <button class= "productoAgregar" id="${producto.id}">Comprar</button>`
-        productsContainer.appendChild(card);
+        productsContainer.appendChild(celular);
     });
     addToCardButton()
 };
 renderProducto(producto);
+
 function addToCardButton (){
     addButton = document.querySelectorAll(".productoAgregar")
     addButton.forEach(button  => {
@@ -71,10 +72,10 @@ function addToCardButton (){
             const productId = e.currentTarget.id
             const selectedProduct = producto.find(producto => producto.id == productId)
 
-            cardProducts.push (selectedProduct)
-            console.log (cardProducts)
+            celularProducts.push (selectedProduct)
+            console.log (celularProducts)
 
-            localStorage.setItem("cardProducts", JSON.stringify(cardProducts))
+            localStorage.setItem("celularProducts", JSON.stringify(celularProducts))
         } 
     })
 };
