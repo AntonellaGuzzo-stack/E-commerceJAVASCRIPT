@@ -44,6 +44,7 @@ body {
     border-radius: 20px 20px 0px 0px;
     align-items: end;
     justify-content: end;
+    display: flex;
     
 }
 /*navbar*/
@@ -113,15 +114,12 @@ body {
   
 /*CarritoCounter*/
   .cantidad-carrito {
+    margin: 0px;
     background-color: red;
     color: white;
+    font-size: 10px;
     border-radius: 50%;
-    font-size: 12px;
-    padding: 4px;
-    top: 37px;
-    right: 14px;
-    position: absolute;
-    display: none;
+    text-align: end;
   }
   
   .sumar {
