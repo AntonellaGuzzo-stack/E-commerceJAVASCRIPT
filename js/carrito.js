@@ -1,4 +1,6 @@
-
+const paginaCarrito =() => {
+  
+}
 
 carrito.forEach((producto) => {
     let carritoContent = document.createElement("div");
@@ -12,8 +14,7 @@ carrito.forEach((producto) => {
         <p>${producto.cantidad}</p>
         <span class="sumar"> + </span>
         <p>Total: ${producto.cantidad * producto.precio} $</p>
-        <span class="delete-product"> ❌ </span>
-      `;
+        <span class="delete-product"> ❌ </span>`;
 
     modalContainer.append(carritoContent);
 
@@ -24,14 +25,13 @@ carrito.forEach((producto) => {
         producto.cantidad--;
       }
       saveLocal();
-      pintarCarrito();
+  
     });
 
     let sumar = carritoContent.querySelector(".sumar");
     sumar.addEventListener("click", () => {
       producto.cantidad++;
       saveLocal();
-      pintarCarrito();
     });
 
     let eliminar = carritoContent.querySelector(".delete-product");
@@ -71,7 +71,6 @@ const eliminarProducto = (id) => {
 
   carritoCounter();
   saveLocal();
-  pintarCarrito();
 };
 
 const carritoCounter = () => {
