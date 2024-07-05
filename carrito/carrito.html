@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/productos.js"></script>
+    <script defer src="../js/extension.js"></script>
+    <script defer src="../js/carrito.js"></script>
     <title>Antonella Guzzo</title> 
-    <script defer src="js/carrito.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <header id="header">
-        <h1 class="Titulo">Compranet</h1>
-    </header>
-    <main id="contenedor" class="contenedor">
-        <h2>Carrito</h2>
-        <section id="card-section"></section>
-        <section id="totales">
-            <p>Total unidades: <span id="cantidad">0</span></p>
-            <p>Total precio: $<span id="precio">0</span></p>
-            <button>Comprar</button>
-            <button id="reiniciar">Reiniciar</button>
-          </section>
-    </main>
-    <footer class="Pie">
-        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="../index.html">elige algunos productos</a></p>
-        <p id="">Total: $XX,XX</p>
-        <button class="productoFinal">Finalizar Compra</button>
-    </footer>
+<body class="bodycarrito">
+<header id="header">
+    <div class="nav-container">
+      <nav class="navbar">
+        <div class="nav-container">
+            <nav class="navbarCarrito">
+              <h1 class="navbar-logo">Compra.net</h1>
+              <a class="ver-carrito" id="verCarrito"></a>
+            </nav>
+          </div>
+      </nav>
+    </div>
+</header>
+<main id="contenedor" class="contenedor">
+    <div class="banner">
+      <div class="banner-container">
+      </div>
+    </div>
+<!--modal container-->
+    <div id="modal-container" class="modal-container">
+    </div>
+</main>
+<footer class="Pie"></footer>
 </body>
 </html>
