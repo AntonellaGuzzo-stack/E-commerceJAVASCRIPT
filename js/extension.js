@@ -5,6 +5,9 @@ const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const saveLocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
 
 productos.forEach((producto) => {
   let celular = document.createElement("div");
@@ -12,7 +15,7 @@ productos.forEach((producto) => {
   celular.innerHTML = `
     <img src="${producto.img}">
     <h3>${producto.nombre}</h3>
-    <p class="price">${producto.precio} $</p>`;
+    <p class="price">$${producto.precio}</p>`;
 
   shopContent.append(celular);
 
@@ -21,7 +24,6 @@ productos.forEach((producto) => {
   comprar.className = "comprar";
 
   celular.append(comprar);
-
   comprar.addEventListener("click", () => {
     const repeat = carrito.some((repeatProducto) => repeatProducto.id === producto.id);
 
@@ -44,12 +46,4 @@ productos.forEach((producto) => {
       carritoCounter();
       saveLocal();
     }
-  });
-});
-
-//set item
-const saveLocal = () => {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-};
-
-//get item
+})});
