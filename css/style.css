@@ -137,7 +137,7 @@ body {
   margin: 0 10%;
   max-height: 88vh;
   color: #070101;
-  background-color: #d3cbcb;
+  background-color: #6b7776;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,8 +155,8 @@ body {
 .modal-header {
   display: flex;
   justify-content: space-around;
-  background-color: #0a0909;
-  color: #fff;
+  background-color: #16586b;
+  color: #110c0c;
   width: 100%;
 }
 
