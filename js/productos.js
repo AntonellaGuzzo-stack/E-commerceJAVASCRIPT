@@ -25,6 +25,7 @@ const productos = [
     nombre: "Motorola",
     precio: 100000,
     img: "https://i1.wp.com/www.smartprix.com/bytes/wp-content/uploads/2021/03/g30-paml0001in-motorola-original-imagyyvwnngbqrvj.jpeg?ssl=1&quality=80&w=367&h=416",
+    cantidad: 1,
 },
 {
     id: 3,
