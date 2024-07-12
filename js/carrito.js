@@ -59,6 +59,14 @@ const paginaCarrito = () => {
   totalBuying.className = "total-content";
   totalBuying.innerHTML = `Total a pagar:$${total}`;
   modalContainer.append(totalBuying);
+
+  const botonPagar = document.createElement("div");
+  botonPagar.className = "boton-pagar";
+  botonPagar.innerHTML = `Finalizar Compra`;
+  modalContainer.append(botonPagar);
+  botonPagar.addEventListener("click", () => {
+    finalizar();
+  });
 };
 
 verCarrito.addEventListener("click", paginaCarrito)
@@ -83,3 +91,25 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
+
+const finalizar = () =>{
+  Swal.fire({
+    title: "Quieres Finalizar la Compra?",
+    customClass: "alert2",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#16586b",
+    confirmButtonWidth: 50,
+    cancelButtonColor: "#1d96b8",
+    confirmButtonText: "Si, ir a pagar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Vamos a Pagar",
+        customClass: "alert3",
+        icon: "success"
+      });
+    }
+  });
+
+};

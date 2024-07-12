@@ -51,13 +51,13 @@ body {
 /*navbar*/
 .scroll{
     background-color: #16586b;
-    box-shadow: .1rem .2rem .3rem #333;
+    box-shadow: .1rem .2rem .3rem #2489a5;
 }
 .scroll img{
     filter: invert(15%);
 }           
 .scroll h1{
-    color: #207891;
+    color: #2489a5;
 }
   
 /*product cards*/
@@ -71,7 +71,7 @@ body {
   }
 .card {
     box-shadow: 6px 6px 12px 6px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -85,7 +85,7 @@ body {
   }
   
 .price {
-    color: grey;
+    color: #4c5c81;
     font-size: 30px;
   }
   
@@ -116,9 +116,9 @@ body {
 /*CarritoCounter*/
   .cantidad-carrito {
     margin: 0px;
-    background-color: red;
+    background-color:#5d6e97;
     color: white;
-    font-size: 10px;
+    font-size: 13px;
     border-radius: 50%;
     text-align: end;
   }
@@ -137,7 +137,7 @@ body {
   margin: 0 10%;
   max-height: 88vh;
   color: #070101;
-  background-color: #6b7776;
+  background-color: #4c5c81;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,6 +146,7 @@ body {
   z-index: 9;
   top: 12vh;
   scrollbar-color: none;
+  border-radius: 3%;
   
 }
 
@@ -155,9 +156,10 @@ body {
 .modal-header {
   display: flex;
   justify-content: space-around;
-  background-color: #16586b;
+  background-color: #0e404e;
   color: #110c0c;
   width: 100%;
+  font-size: 25px;
 }
 
 .modal-header-title {
@@ -166,6 +168,7 @@ body {
 
 .modal-header-button {
   cursor: pointer;
+  color: aliceblue;
 }
 
 .modal-container > .modal-content {
@@ -175,9 +178,49 @@ body {
   align-items: center;
   width: 70%;
   margin: 10px;
+  font-size: 20px;
 }
 
 .modal-container > div > img {
   height: 100px;
   width: 90px;
+}
+
+.boton-pagar {
+  padding: 5px;
+  margin: 20px;
+  width: 70%;
+  background-color: #16586b;
+  border: 1px #000 solid;
+  box-shadow: #000 0 1px 1px 0;
+  font-size: 180%;
+  text-align: center;
+}
+
+.finalizar {
+  color: #110909;
+}
+
+.alert2 {
+  width: 700px;
+}
+.alert3 {
+  width: 550px;
+}
+.swal2-title{
+  text-align: center;
+  font-size: 30px;
+}
+
+.swal2-confirm {
+  width: 200px;
+  font-size: 20px;
+}
+.swal2-cancel {
+  width: 200px;
+  font-size: 20px;
+}
+.swal2-icon{
+  font-size: 30px;
+  margin-bottom: 20px;
 }
