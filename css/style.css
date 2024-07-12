@@ -44,7 +44,9 @@ body {
   height: 70px;
 }
 .cantidad-carrito {
-  margin-left: 20px;
+  display: flex;
+  padding: 0%;
+  margin-left: 10px;
   color: #fff;
   background-color: #ff69b4;
   border-radius: 50%;
@@ -58,7 +60,7 @@ body {
     filter: invert(15%);
 }           
 .scroll h1{
-    color: #2489a5;
+    color: #6cc2da;
 }
 
 main{
@@ -120,7 +122,10 @@ main{
   
 /*CarritoCounter*/
   .cantidad {
-    margin-left: 80px;
+    display: flex;
+    padding: 0%;
+    margin-left: 70px;
+    margin-bottom: 0px;
     background-color:#5d6e97;
     color: white;
     font-size: 13px;
