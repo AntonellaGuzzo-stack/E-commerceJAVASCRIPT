@@ -47,6 +47,15 @@ const getProducts = async () => {
         carritoCounter();
         saveLocal();
       }
+      Swal.fire({
+        position: "top-end",
+        customClass: "alert1",
+        icon: "success",
+        title: "Agregado al carrito",
+        showConfirmButton: false,
+        timer: 1000
+      });
+
   })})
 }
 getProducts();
@@ -54,3 +63,4 @@ getProducts();
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
