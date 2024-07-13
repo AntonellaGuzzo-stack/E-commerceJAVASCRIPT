@@ -7,6 +7,7 @@ const paginaCarrito = () => {
       <h1 class="modal-header-title">Carrito</h1>`;
   modalContainer.append(modalHeader);
 
+
   modalbutton = document.createElement("h1");
   modalbutton.innerText = "x";
   modalbutton.className = "modal-header-button";
@@ -16,6 +17,7 @@ const paginaCarrito = () => {
   });
 
   modalHeader.append(modalbutton);
+
   carrito.forEach((producto) => {
     let carritoContent = document.createElement("div");
     carritoContent.className = "modal-content";
@@ -60,6 +62,8 @@ const paginaCarrito = () => {
   totalBuying.innerHTML = `Total a pagar:$${total}`;
   modalContainer.append(totalBuying);
 
+ 
+
   const botonPagar = document.createElement("div");
   botonPagar.className = "boton-pagar";
   botonPagar.innerHTML = `Finalizar Compra`;
@@ -67,6 +71,18 @@ const paginaCarrito = () => {
   botonPagar.addEventListener("click", () => {
     finalizar();
   });
+
+  const vaciarCarrito = document.createElement("div");
+  vaciarCarrito.innerHTML = "Vaciar Carrito";
+  vaciarCarrito.className = "boton-pagar";
+
+  vaciarCarrito.addEventListener("click", () => {
+    carrito = []
+    localStorage.clear();
+    paginaCarrito();
+    carritoCounter();
+  })
+  modalContainer.append(vaciarCarrito);
 };
 
 verCarrito.addEventListener("click", paginaCarrito)
@@ -102,14 +118,28 @@ const finalizar = () =>{
     confirmButtonWidth: 50,
     cancelButtonColor: "#1d96b8",
     confirmButtonText: "Si, ir a pagar!"
-  }).then((result) => {
+  }).then(async (result) => {
     if (result.isConfirmed) {
-      Swal.fire({
-        title: "Vamos a Pagar",
-        customClass: "alert3",
-        icon: "success"
-      });
-    }
-  });
-
-};
+        const { value: formValues } = await Swal.fire({
+          title: "Completa con tus Datos",
+          customClass: "datos",
+          html: `<h5>NOMBRE</h5>
+            <input id="swal-input1" class="swal2-input">
+            <h5>DNI</h5>
+            <input id="swal-input2" class="swal2-input">`,
+          focusConfirm: false,
+          preConfirm: () => {
+            return [
+              nombre= document.getElementById("swal-input1").value,
+              dni= document.getElementById("swal-input2").value,
+            ];
+          }
+        });
+      if (formValues) {
+          const texto = Object.values(formValues).join(' <br> ');
+          Swal.fire(texto);
+          localStorage.clear();
+          }}
+        })  
+}
+  

@@ -16,9 +16,27 @@ const getProducts = async () => {
     celular.innerHTML = `
       <img src="${producto.img}">
       <h3>${producto.nombre}</h3>
-      <p class="price">$${producto.precio}</p>`;
+      <p class="price">$${producto.precio}</p>
+      <div class="botonesCantidad"> <span class="sacar"> - </span>
+      <h4>${producto.cantidad} </h4> 
+      <span class="agregar"> + </span>
+      </div>`;
   
     shopContent.append(celular);
+  const agregarBtn = celular.querySelector(".agregar");
+  const sacarBtn = celular.querySelector(".sacar");
+
+  agregarBtn.addEventListener("click", () => {
+    producto.cantidad++;
+    celular.querySelector("h4").textContent = producto.cantidad;
+  });
+
+  sacarBtn.addEventListener("click", () => {
+    if (producto.cantidad > 0) {
+      producto.cantidad--;
+      celular.querySelector("h4").textContent = producto.cantidad;
+    }
+  });
   
     let comprar = document.createElement("button");
     comprar.innerText = "comprar";
@@ -55,8 +73,7 @@ const getProducts = async () => {
         showConfirmButton: false,
         timer: 1000
       });
-
-  })})
+    })})
 }
 getProducts();
 
