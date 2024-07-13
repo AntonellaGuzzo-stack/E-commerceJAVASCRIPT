@@ -86,7 +86,7 @@ main{
     border-radius: 10px;
   }
 h3{
-  font-size: 40px;
+  font-size: 23px;
 }
   
 .card > img {
@@ -214,6 +214,19 @@ h3{
   margin: 15px;
   width: 40%;
   background-color: #16586b;
+  border: 1px #000 solid;
+  border-radius: 3%;
+  box-shadow: #000 0 2px 2px 0;
+  font-size: 180%;
+  text-align: center;
+}
+.boton-vaciar{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 15px;
+  width: 40%;
+  background-color: #093441;
   border: 1px #000 solid;
   border-radius: 3%;
   box-shadow: #000 0 2px 2px 0;

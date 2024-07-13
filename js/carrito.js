@@ -74,7 +74,7 @@ const paginaCarrito = () => {
 
   const vaciarCarrito = document.createElement("div");
   vaciarCarrito.innerHTML = "Vaciar Carrito";
-  vaciarCarrito.className = "boton-pagar";
+  vaciarCarrito.className = "boton-vaciar";
 
   vaciarCarrito.addEventListener("click", () => {
     carrito = []
@@ -86,8 +86,6 @@ const paginaCarrito = () => {
 };
 
 verCarrito.addEventListener("click", paginaCarrito)
-
-paginaCarrito();
 
 const eliminarProducto = (id) => {
   const foundId = carrito.find((element) => element.id === id);

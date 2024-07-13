@@ -1,44 +1,65 @@
  [
     {
     "id": 1,
-    "nombre": "Samsung",
+    "nombre": "GALAXY Z FLIP 5",
     "precio": 150000,
-    "img": "https://walmartsv.vtexassets.com/arquivos/ids/296356-800-600?v=638131197827170000&width=800&height=600&aspect=true",
+    "img": "https://medias.musimundo.com/medias/size515-149453-01.jpg?xcd_image_optimization=false&context=bWFzdGVyfGltYWdlc3w0MDQ0MXxpbWFnZS9qcGVnfGFEVXdMMmc1WVM4eE1EVTNNRE15T1RReU16a3dNaTl6YVhwbE5URTFYekUwT1RRMU0xOHdNUzVxY0djfDU1NjM0ZjAxOTE5ZTQwMTIyN2YyNTI2MDE2M2YzNzQ5ZmI3MzNmN2QzZjk4YzRjNDZhOTlmMTE1OTZjMjdjOTU",
     "cantidad": 1
   },
   {
     "id": 2,
-    "nombre": "Motorola",
+    "nombre": "MOTOROLA MOTO G04",
     "precio": 100000,
-    "img": "https://i1.wp.com/www.smartprix.com/bytes/wp-content/uploads/2021/03/g30-paml0001in-motorola-original-imagyyvwnngbqrvj.jpeg?ssl=1&quality=80&w=367&h=416",
+    "img": "https://medias.musimundo.com/medias/size515-151031-01.jpg?xcd_image_optimization=false&context=bWFzdGVyfGltYWdlc3w1MzM1NnxpbWFnZS9qcGVnfGFESmpMMmczTXk4eE1EVTROalF5TnpRMU56VTJOaTl6YVhwbE5URTFYekUxTVRBek1WOHdNUzVxY0djfGFiZDE1ZTMwMGMxZTIxZTMxZmE5M2Y0NTI1OWQ0Mzg1ZTkwMzg3ODMyMjkzYjhjZTI1NGE5OTY2NDA4Y2JhYzM",
     "cantidad": 1
   },
   {
     "id": 3,
-    "nombre": "Apple",
+    "nombre": "IPHONE 15",
     "precio": 250000,
-    "img": "https://coolboxpe.vtexassets.com/arquivos/ids/335067-800-450?v=638388568456100000&width=800&height=450&aspect=true",
+    "img": "https://th.bing.com/th/id/OIP.JAtSunZUUhEvFa4x4mAUjAHaHa?w=157&h=180&c=7&r=0&o=5&pid=1.7",
     "cantidad": 1
   },
   {
     "id": 4,
-    "nombre": "Xiamo",
+    "nombre": "XIAOMI REDMI NOTE 13",
     "precio": 150000,
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlWn6A1mEFXD1lK2RfG1CLSeeErVeOQxTK3g&s",
+    "img": "https://medias.musimundo.com/medias/size515-151034-01.jpg?xcd_image_optimization=false&context=bWFzdGVyfGltYWdlc3wyODIxN3xpbWFnZS9qcGVnfGFEVmlMMmd3WWk4eE1EVTNNekU0TWpnNU5ERXhNQzl6YVhwbE5URTFYekUxTVRBek5GOHdNUzVxY0djfDNjMmIwMjQ0ZWFkZTBjYmQ3MDdjZmRkOWFjZmNjZTY5NDI3OTY5NWQzNmZkYzUxNWVlZTU3YzExZDEwN2Q0YWE",
     "cantidad": 1
   },
   {
     "id": 5,
-    "nombre": "Realme",
+    "nombre": "REALME NOTE 12C",
     "precio": 205000,
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsrPpacKeLIjQvA7FzPhxd85uQnaEUcSD-_g&s",
+    "img": "https://naldoar.vtexassets.com/arquivos/ids/171914-800-800?v=638265855877070000&width=800&height=800&aspect=true",
     "cantidad": 1
   },
   {
     "id": 6,
-    "nombre": "Huawei",
+    "nombre": "Huawei Mate 30 Pro",
     "precio": 150000,
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEJcIbzf0nKDieLdny4hm7oWQLfvftLMSaA&s",
+    "img": "https://th.bing.com/th/id/R.70eb462a5b52233d20e360fe35202104?rik=GTPxnq3ibilzCg&pid=ImgRaw&r=0",
+    "cantidad": 1
+  },
+  {
+    "id": 7,
+    "nombre": "TCL 40 SE NEGRO",
+    "precio": 60000,
+    "img": "https://medias.musimundo.com/medias/size515-149001-01.jpg?xcd_image_optimization=false&context=bWFzdGVyfGltYWdlc3w3MjU1NHxpbWFnZS9qcGVnfGFHTm1MMmhsWWk4eE1EVXlOekV6TURReE9USXpNQzl6YVhwbE5URTFYekUwT1RBd01WOHdNUzVxY0djfGE0YWI3ZWQ4NjA0ODFlZTU4ZmYxYzQ0YTI3YzFiNmNkOTA0NWQyMDNlNmI4OWY4ODAyMWJkNTA3ODJiZWY1MDU",
+    "cantidad": 1
+  },
+  {
+    "id": 8,
+    "nombre": "ZTE BLADE A72S GRIS",
+    "precio": 50000,
+    "img": "https://medias.musimundo.com/medias/size300-149714-01.jpg?xcd_image_optimization=false&context=bWFzdGVyfGltYWdlc3wyMzMzMXxpbWFnZS9qcGVnfGFHSmtMMmcxTkM4eE1EVXdOekU1TWpjeU9UWXpNQzl6YVhwbE16QXdYekUwT1RjeE5GOHdNUzVxY0djfGNmZjg0MDlmNjcxODNlYjI3MWViZDE1NjAyNmVmOWYyMWNkYjBkNjFlY2RiMjM0MGU4YjY5ZmVjNzVjMmFmMmU",
+    "cantidad": 1
+  },
+  {
+    "id": 9,
+    "nombre": "NOBLEX B30",
+    "precio": 110000,
+    "img": "https://www.casadelaudio.com/Image/0/700_700-Noblex_A60_Plus_-_Foto_1.jpg",
     "cantidad": 1
   }
   ]
