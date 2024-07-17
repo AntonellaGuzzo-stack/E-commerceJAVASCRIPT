@@ -289,3 +289,11 @@ h5{
   width: 50%;
 }
 
+/*footer*/
+.Pie{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: end;
+  justify-content: end;
+  margin-right: 25px;
+}
