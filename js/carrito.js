@@ -24,11 +24,11 @@ const paginaCarrito = () => {
     carritoContent.innerHTML = `
         <img src="${producto.img}">
         <h3>${producto.nombre}</h3>
-        <p>${producto.precio} $</p>
+        <p>$${producto.precio}</p>
         <span class="restar"> - </span>
         <p>${producto.cantidad}</p>
         <span class="sumar"> + </span>
-        <p>Total:$${producto.cantidad * producto.precio}</p>
+        <p class="totalproducto">Total:$${producto.cantidad * producto.precio}</p>
         <span class="delete-product"> ❌ </span>`;
 
     modalContainer.append(carritoContent);
@@ -69,8 +69,16 @@ const paginaCarrito = () => {
   botonPagar.innerHTML = `Finalizar Compra`;
   modalContainer.append(botonPagar);
   botonPagar.addEventListener("click", () => {
-    finalizar();
+    if (localStorage.getItem("carrito") && JSON.parse(localStorage.getItem("carrito")).length > 0) {
+      finalizar();
+    } else {
+      Swal.fire({
+        title: "AGREGA PRODUCTOS",
+        icon: "error",
+      });
+    }
   });
+
 
   const vaciarCarrito = document.createElement("div");
   vaciarCarrito.innerHTML = "Vaciar Carrito";
@@ -78,9 +86,23 @@ const paginaCarrito = () => {
 
   vaciarCarrito.addEventListener("click", () => {
     carrito = []
-    localStorage.clear();
-    paginaCarrito();
-    carritoCounter();
+    Swal.fire({
+      title: "Quieres eliminar todo?",
+      customClass: "alert3",
+      confirmButtonColor: "#16586b",
+      confirmButtonWidth: 50,
+      cancelButtonColor: "#1d96b8",
+      showCancelButton: true,
+      confirmButtonText: "Eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.clear();
+        paginaCarrito();
+        carritoCounter();
+      } else if (result.isDenied) {
+      }
+    });
+
   })
   modalContainer.append(vaciarCarrito);
 };
@@ -123,21 +145,29 @@ const finalizar = () =>{
           customClass: "datos",
           html: `<h5>NOMBRE</h5>
             <input id="swal-input1" class="swal2-input">
-            <h5>DNI</h5>
+            <h5>MAIL</h5>
             <input id="swal-input2" class="swal2-input">`,
           focusConfirm: false,
           preConfirm: () => {
             return [
               nombre= document.getElementById("swal-input1").value,
-              dni= document.getElementById("swal-input2").value,
+              mail= document.getElementById("swal-input2").value,
             ];
           }
         });
-      if (formValues) {
+        if (formValues) {
           const texto = Object.values(formValues).join(' <br> ');
-          Swal.fire(texto);
-          localStorage.clear();
-          }}
+          Swal.fire({
+            html: texto,
+            confirmButtonText: 'Pagar',
+            allowOutsideClick: false
+          }).then((result) => {
+            if (result.isConfirmed) {
+              localStorage.clear();
+              location.reload();
+            }
+          });
+        }}
         })  
 }
   
